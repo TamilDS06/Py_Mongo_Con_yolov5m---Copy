@@ -106,4 +106,17 @@ def update_count_DB(ai_counts_collection, ai_counts_single_doc, update_count, is
         else:
             print("Internet is interrupted @", time.strftime('%H-%M-%S'), "While updating the count")
             time.sleep(constant.time_to_wait)
+
+
+    #         def update_count_DB(ai_counts_collection, ai_counts_single_doc, update_count, is_processed):
+    # while True:
+    #     if internet_connect():
+    #         ai_counts_collection.update_one({'_id':ai_counts_single_doc['_id']},{'$set':{'count':str(update_count)}})
+    #         ai_counts_collection.update_one({'_id':ai_counts_single_doc['_id']},{'$set':{'is_processed':is_processed}})
+    #         print("count is: ", update_count)
+    #         print("updating", ai_counts_single_doc['_id'])
+    #         break
+    #     else:
+    #         print("Internet is interrupted @", time.strftime('%H-%M-%S'), "While updating the count")
+    #         time.sleep(constant.time_to_wait)
         
